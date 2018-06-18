@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Queasy quotes</title>
+  <link rel="stylesheet" type="text/css" href="quote.css">
+  <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+</head>
+<body>
+  <div class="container" >
+    <header>
+        <h1>
+            <img src="./images/q-scale.png" alt="quotes app logo" />
+        </h1>
+        <h2>Quotes App</h2>
+        <p>...keeping you motivated.</p>
+    </header>
+    <main>
+        <div id="quote-container" class="quotes-container">
+            New quotes will be displayed here.
+        </div>
+        <div class="new-quotes"> 
+            <p>Feeling motivated? <span>Add new quote</span></p>
+            <form onsubmit="return false">
+              <label for="nquote">New Quote:</label>
+              <input type="text" id="new-quote" name="newquote"> <br>
+              <input type="submit" onclick="addNewQuote()" value="Add new quote">
+            </form>
+        </div>
+        <div class="get-quotes">
+            <p>Need motivation? Get new quote.</p>
+            <button onclick="newQuote()">Get new quote</button>
+        </div>
+          
+    </main> 
+    <footer class="footer">
+      <p> &copy; Divinelove web solutions 2018 </p>
+    </footer>
+  </div>  
+  <script src="quote.js"></script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+body{
+  background: url('./images/dream-blur.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Philosopher', sans-serif;
+}
+:root {
+  font-size: calc(0.5em + 1vw);
+  }
+header h1{
+  display: inline-block; 
+  width: 3em;
+  margin-bottom: -3em;
+}  
+header h2{
+  font-size: 2.5rem;
+  color: #6b5b95;
+  display: inline-block;
+  margin-left: -1.4em; 
+}
+header p {
+  font-size: 0.8rem;
+  margin-top: -2.97em;
+}
+
+.quotes-container{
+  color: #6b5b95;
+  text-align: center;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-left-style: none;
+  border-right-style: none;
+  border-color: #6b5b95;
+  border-width: 8px;
+  width: 20em;
+  padding: 2em;
+  margin: 0 auto;
+  margin-top: 1.2em;
+  background-color: #bec0d6;
+}
+
+.new-quotes{
+  margin-top: 1.3em;
+  margin-left: 1.3em;
+  outline: 3px dashed #ff7b25;
+  width: 16em;
+  display: inline-block;
+}
+
+.new-quotes p{
+margin-top: 0;
+padding-top: 1em;
+padding-left: 1em;
+font-weight: bold;
+color: #6b5b95;
+}
+.new-quotes label{
+  padding-left: 1em;
+  color: #6b5b95;
+}
+input[type=text]{
+  width: 15em;
+  color: #feb236;
+  padding: 1em;
+  margin: 0.7em 0;
+  display: inline-block;
+  border: 2px solid #6b5b95;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+input[type=submit]{
+  width: 8.5em;
+  
+  color: #feb236;
+  padding: 1em;
+  margin: 0 0 1.2em 1em;
+  border: 2px solid #6b5b95;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #9c8ec4;
+}
+
+.get-quotes{
+  display: inline-block;
+  background-color: #ff7b25;
+  margin-left: 22em;
+  border-radius: 7px;
+  margin-top: 0em;
+}
+
+.get-quotes p{
+  font-size: 1em;
+  padding: 0 2em;
+  color: #6b5b95;
+  font-weight: bold;
+}
+
+.get-quotes button{
+  background-color: #6b5b95;
+  border: 3px solid #6b5b95;
+  border-radius: 7px;
+  padding: 1em;
+  margin: 0 0 1em 2em;
+  color: #feb236;
+}
+.get-quotes button:hover {
+  background-color: #9c8ec4;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 3em;
+  width: 100%;
+  background-color: #f79254;
+  color: white;
+  text-align: center;
+}
+
+/* 
+  styles for small mobile devices
+
+*/
+@media (max-width: 35em) {
+  header h1{
+    display: inline-block; 
+    width: 3em;
+    margin-bottom: -3em;
+    margin-top: 0em;
+  } 
+ 
+  header h2{
+    font-size: 2.5rem;
+    color: #6b5b95;
+    display: inline-block;
+    margin-left: -0.7em; 
+    margin-top: 0em;
+  }
+  .quotes-container{ 
+    margin-top: 0.7em;
+  }
+  
+  input[type=submit]{
+    width: 8.5em;
+    color: #feb236;
+    padding: 0.7em;
+    margin: -1.5em 0 1.2em 1em;
+    border: 2px solid #6b5b95;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  input[type=text]{
+    width: 12em;
+    color: #feb236;
+    padding: 1em;
+    margin: 0.7em 1.5em 0.7em 1em;
+    display: inline-block;
+    border: 2px solid #6b5b95;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  .new-quotes{
+    margin-top: 1.3em;
+    margin-left: 5em;
+    outline: 3px dashed #ff7b25;
+    width: 16em;
+    display: inline-block;
+  }
+
+  .get-quotes{
+    display: inline-block;
+    background-color: #ff7b25;
+    margin-left: 5em;
+    border-radius: 7px;
+    margin-top: 1em;
+  }
+
+  .get-quotes p{
+    font-size: 1em;
+    padding: 0 0.5em;
+    color: #6b5b95;
+    font-weight: bold;
+  }
+  
+  .get-quotes button{
+    background-color: #6b5b95;
+    border: 3px solid #6b5b95;
+    border-radius: 7px;
+    padding: 0;
+    margin: -0.2em 0 0.5em 0.5em;
+    color: #feb236;
+  }
+  .footer {
+    height: 1.5em;
+  }
+  .footer p{
+    margin-top: 0;
+  }
+}
+
+/* @media (min-width: 35em) {
+  .title {
+  ...
+  }
+}
+
+@media (min-width: 50em) {
+  .title {
+  ...
+  }
+} */
