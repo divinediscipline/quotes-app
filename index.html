@@ -1,44 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Queasy quotes</title>
-  <link rel="stylesheet" type="text/css" href="quote.css">
-  <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Queasy quotes</title>
+    <link rel="stylesheet" type="text/css" href="quote.css">
+    <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 </head>
+
 <body>
-  <div class="container" >
-    <header>
-        <h1>
-            <img src="./images/q-scale.png" alt="quotes app logo" />
-        </h1>
-        <h2>Quotes App</h2>
-        <p>...keeping you motivated.</p>
-    </header>
-    <main>
-        <div id="quote-container" class="quotes-container">
-            New quotes will be displayed here.
-        </div>
-        <div class="new-quotes"> 
-            <p>Feeling motivated? <span>Add new quote</span></p>
-            <form onsubmit="return false">
-              <label for="nquote">New Quote:</label>
-              <input type="text" id="new-quote" name="newquote"> <br>
-              <input type="submit" onclick="addNewQuote()" value="Add new quote">
-            </form>
-        </div>
-        <div class="get-quotes">
-            <p>Need motivation? Get new quote.</p>
-            <button onclick="newQuote()">Get new quote</button>
-        </div>
-          
-    </main> 
-    <footer class="footer">
-      <p> &copy; Divinelove web solutions 2018 </p>
-    </footer>
-  </div>  
-  <script src="quote.js"></script>
+    <div class="container">
+        <header>
+            <h2>Quotes App</h2>
+            <p>...keeping you motivated.</p>
+        </header>
+        <main>
+            <div id="quote-container" class="quotes-container">
+                <p id="quote" class="main-quote">Life is like a boxing ring. You don't lose because you fall, but because you refuse to stand up.</p>
+                <p id="quote-author" class="quote-author">Divinelove Chukwuemeka</p>
+            </div>
+            <div class="new-quotes">
+                <p>Feeling motivated?
+                    <span>Add new quote</span>
+                </p>
+                <form onsubmit="return false">
+                    <label for="nquote">New Quote:</label>
+                    <input type="text" id="new-quote" name="newquote" maxlength="50" placeholder="Add your new quote here" required minlength="5">
+
+                    <label for="qauthor">Quote author:</label>
+                    <input type="text" id="new-author" name="quoteauthor" maxlength="50" placeholder="Quote author" required>
+
+                    <br>
+                    <input type="submit" onclick="addNewQuote()" value="Add new quote">
+
+                </form>
+            </div>
+
+            <button class="button" onclick="getNewQuote()">Get new quote</button>
+
+
+        </main>
+    </div>
+    <script src="quote.js"></script>
 </body>
+
 </html>

@@ -1,42 +1,98 @@
 let quotes = [
-  'Well done is better than well said. -Benjamin Franklin',
-  'The past cannot be changed. The future is yet in your power. -Unknown',
-  'Failure will never overtake me if my determination to succeed is strong enough. -Og Mandino',
-  'Change your life today. Don\'t gamble on the future, act now, without delay. -Simone de Beauvoir',
-  'With the new day comes new strength and new thoughts. -Eleanor Roosevelt',
-  'Optimism is the faith that leads to achievement. Nothing can be done without hope and confidence. -Helen Keller',
-  'Life is 10% what happens to you and 90% how you react to it. -Charles R. Swindoll',
-  'Good, better, best. Never let it rest. \'Til your good is better and your better is best. -St. Jerome',
-  'Only I can change my life. No one can do it for me. -Carol Burnett',
-  'Life is like a boxing ring. You don\'t lose because you fall, but because you refuse to stand up. -Divinelove Chukwuemeka' 
+  {
+    quote: "Well done is better than well said.",
+    quoteAuthor: "Benjamin Franklin"
+  },
+
+  {
+    quote: "The past cannot be changed. The future is yet in your power.",
+    quoteAuthor: "Unknown"
+  },
+
+  {
+    quote:
+      "Failure will never overtake me if my determination to succeed is strong enough.",
+    quoteAuthor: "Og Mandino"
+  },
+
+  {
+    quote:
+      "Change your life today. Don't gamble on the future, act now, without delay.",
+    quoteAuthor: "Simone de Beauvoir"
+  },
+  {
+    quote: "With the new day comes new strength and new thoughts.",
+    quoteAuthor: "Eleanor Roosevelt"
+  },
+  {
+    quote:
+      "Optimism is the faith that leads to achievement. Nothing can be done without hope and confidence.",
+    quoteAuthor: "Helen Keller"
+  },
+  {
+    quote: "Life is 10% what happens to you and 90% how you react to it.",
+    quoteAuthor: "Charles R. Swindoll"
+  },
+  {
+    quote:
+      "Good, better, best. Never let it rest. 'Til your good is better and your better is best.",
+    quoteAuthor: "St. Jerome"
+  },
+  {
+    quote: "Only I can change my life. No one can do it for me.",
+    quoteAuthor: "Carol Burnett"
+  },
+  {
+    quote:
+      "Life is like a boxing ring. You don't lose because you fall, but because you refuse to stand up.",
+    quoteAuthor: "Divinelove Chukwuemeka"
+  }
 ];
 
-let images = ['url(./images/challenge-blur.jpeg)', 'url(./images/treestump-blur.jpg)', 'url(./images/sunset1-blur.jpeg)', 'url(./images/sunset2-blur.jpeg)', 'url(./images/nature-blur.jpeg)', 'url(./images/sunset3-blur.jpeg)']
-let imageIndex = 0; 
-// function changeimage(){
-//   document.body.style.backgroundImage = 'url(./images/office-blur.jpeg)';
-// }
-function changeImage(){
-  
-  if (imageIndex < images.length - 1){
+let images = [
+  "url(./images/original/challenge.jpeg)",
+  "url(./images/original/nature.jpeg)",
+  "url(./images/original/sunset1.jpeg)",
+  "url(./images/original/sunset2.jpeg)",
+  "url(./images/original/sunset3.jpeg)",
+  "url(./images/original/tree.jpg)"
+];
+let imageIndex = 0;
+
+function changeImage() {
+  if (imageIndex < images.length - 1) {
     imageIndex++;
-  }else{
+  } else {
     imageIndex = 0;
   }
- 
+
   document.body.style.backgroundImage = images[imageIndex];
 }
 
-function newQuote(){
-  let randomNumber = Math.floor(Math.random() * (quotes.length));
-  document.getElementById('quote-container').innerHTML = quotes[randomNumber];
+function getNewQuote() {
+  let randomNumber = Math.floor(Math.random() * quotes.length);
+  document.getElementById("quote").innerHTML = quotes[randomNumber].quote;
+  document.getElementById("quote-author").innerHTML =
+    quotes[randomNumber].quoteAuthor;
   changeImage();
 }
 
-function addNewQuote(){
-   let inputElement = document.getElementById('new-quote');
-  let newQuote = inputElement.value;
-  quotes.push(newQuote.trim());
-  console.log(quotes);
-  inputElement.value = '';
+function addNewQuote() {
+  let quoteElement = document.getElementById("new-quote");
+  let quoteAuthorElement = document.getElementById("new-author");
+  // console.log(quoteElement.value);
+  // console.log(quoteAuthorElement.value);
+  let newQuote = quoteElement.value.trim();
+  let newQuoteAuthor = "-" + quoteAuthorElement.value.trim();
+  quotes.push({
+    quote: newQuote,
+    quoteAuthor: newQuoteAuthor
+  });
+  quoteElement.value = "";
+  quoteAuthorElement.value = "";
+  // console.log(quotes);
+  document.getElementById("quote").innerHTML = newQuote;
+  document.getElementById("quote-author").innerHTML = newQuoteAuthor;
+
+  changeImage();
 }
